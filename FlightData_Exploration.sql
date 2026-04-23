@@ -138,4 +138,4 @@ GROUP BY p.name, a.Name)
 
 SELECT Name, Airline, Usage
 FROM CTE_rank 
-WHERE rnk = 1
+WHERE rnk = 1;
