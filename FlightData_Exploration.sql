@@ -55,7 +55,7 @@ WHERE rn = 1;
 
 
 
---Q5. For Each Flight, show time taken in hours and categorize it as short (<2h), Medium (205h), or long (>5hr)
+--Q5. For Each Flight, show time taken in hours and categorize it as short (<2h), Medium (2-5h), or long (>5hr)
 
 SELECT FlightID, DepartureTime, ArrivalTime, DATEDIFF(MINUTE, DepartureTime, ArrivalTime)/60 as Duration,
     CASE 
@@ -95,7 +95,7 @@ WHERE r.rank = 1
 
 
 
---Q8. Find the higest spending passenfer in each frequent flyer status group. 
+--Q8. Find the higest spending passenger in each frequent flyer status group. 
 
 WITH CTE_spending as 
     (
